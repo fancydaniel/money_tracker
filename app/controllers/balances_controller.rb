@@ -10,7 +10,19 @@ class BalancesController < ApplicationController
   end
 
   def new
+    @balance = Balance.new
+  end
+
+  def create
     @balance = Balance.new(balance_params)
+
+    if @balance.save
+      flash[:notice] = "Balance was saved"
+      redirect_to balances_path
+    else
+      flash[:error] = "There was an error saving your balance. Please try again."
+      render :new
+    end
   end
 
   private
