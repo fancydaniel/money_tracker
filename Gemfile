@@ -19,10 +19,20 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console'
+  gem 'factory_girl_rails', '~> 4.7'
   gem 'listen', '~> 3.0.5'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console'
+end
+
+group :test do
+  gem 'capybara', '~> 2.8', '>= 2.8.1'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
