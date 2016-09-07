@@ -1,4 +1,4 @@
-class AccountsController < ApplicationController
+class AccountController < ApplicationController
 
   def index
 
