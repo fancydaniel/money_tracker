@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :balances
 
+  resources :account, only: [:index, :show]
+
   
 end
